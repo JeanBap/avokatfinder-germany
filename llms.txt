@@ -1,5 +1,37 @@
 # AvökatFinder Germany
-> English-speaking law firm directory for Germany
+> The English-language directory of lawyers and law firms in Germany for expats, foreign nationals and international businesses.
 
-Directory: https://germany.avokatfinder.com
-Email: info@avokatfinder.com
+## Main Pages
+- https://germany.avokatfinder.com/: Home — find an English-speaking lawyer in Germany
+- https://germany.avokatfinder.com/lawyers/: Directory of verified law firms and lawyers in Germany
+- https://germany.avokatfinder.com/glossary/: Legal glossary — plain-English definitions of Germany legal terms
+- https://germany.avokatfinder.com/blog/: Expat legal guides and property law articles for Germany
+- https://germany.avokatfinder.com/about/: About AvökatFinder Germany
+- https://germany.avokatfinder.com/contact/: Contact us
+
+## Legal Glossary Terms
+- https://germany.avokatfinder.com/glossary/abmeldung/
+- https://germany.avokatfinder.com/glossary/anmeldung/
+- https://germany.avokatfinder.com/glossary/anmeldung/
+- https://germany.avokatfinder.com/glossary/aufenthaltserlaubnis/
+- https://germany.avokatfinder.com/glossary/aufenthaltstitel/
+- https://germany.avokatfinder.com/glossary/eigenbedarfskuendigung/
+- https://germany.avokatfinder.com/glossary/erbschein/
+- https://germany.avokatfinder.com/glossary/gmbh/
+- https://germany.avokatfinder.com/glossary/grundbuch/
+- https://germany.avokatfinder.com/glossary/grundbuch/
+- https://germany.avokatfinder.com/glossary/grunderwerbsteuer/
+- https://germany.avokatfinder.com/glossary/handelsregister/
+- https://germany.avokatfinder.com/glossary/nebenkostenabrechnung/
+- https://germany.avokatfinder.com/glossary/sozialversicherung/
+
+## Site Info
+- Language: English
+- Audience: Expats, foreign nationals, international property buyers and businesses in Germany
+- Content: Law firm directory, legal glossary, expat legal guides
+- Last updated: 2026-04-30
+- Sitemap: https://germany.avokatfinder.com/sitemap.xml
+
+## Permissions
+User-agent: *
+Allow: /
