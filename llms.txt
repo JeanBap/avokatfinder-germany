@@ -12,12 +12,24 @@
 ## Legal Glossary Terms
 - https://germany.avokatfinder.com/glossary/abmeldung/
 - https://germany.avokatfinder.com/glossary/anmeldung/
+- https://germany.avokatfinder.com/glossary/aufenthaltserlaubnis/
 - https://germany.avokatfinder.com/glossary/aufenthaltstitel/
+- https://germany.avokatfinder.com/glossary/auflassungsvormerkung/
+- https://germany.avokatfinder.com/glossary/baugenehmigung/
+- https://germany.avokatfinder.com/glossary/eigenbedarfskuendigung/
+- https://germany.avokatfinder.com/glossary/energieausweis/
+- https://germany.avokatfinder.com/glossary/erbschaftsteuer/
+- https://germany.avokatfinder.com/glossary/gewerbeanmeldung/
 - https://germany.avokatfinder.com/glossary/grundbuch/
 - https://germany.avokatfinder.com/glossary/grunderwerbsteuer/
+- https://germany.avokatfinder.com/glossary/grundschuld/
+- https://germany.avokatfinder.com/glossary/kaufvertrag/
+- https://germany.avokatfinder.com/glossary/maklercourtage/
+- https://germany.avokatfinder.com/glossary/mietvertrag/
 - https://germany.avokatfinder.com/glossary/nebenkostenabrechnung/
-- https://germany.avokatfinder.com/glossary/aufenthaltserlaubnis/
-- https://germany.avokatfinder.com/glossary/eigenbedarfskuendigung/
+- https://germany.avokatfinder.com/glossary/notarkosten/
+- https://germany.avokatfinder.com/glossary/steueridentifikationsnummer/
+- https://germany.avokatfinder.com/glossary/weg-wohnungseigentumsgesetz/
 - https://germany.avokatfinder.com/glossary/erbschein/
 - https://germany.avokatfinder.com/glossary/gmbh/
 - https://germany.avokatfinder.com/glossary/handelsregister/
