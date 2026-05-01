@@ -35,11 +35,18 @@
 - https://germany.avokatfinder.com/glossary/handelsregister/
 - https://germany.avokatfinder.com/glossary/sozialversicherung/
 
+
+## Interactive Legal Tools
+- https://germany.avokatfinder.com/tools/
+- https://germany.avokatfinder.com/tools/legal-cost-calculator/
+- https://germany.avokatfinder.com/tools/legal-templates/
+- https://germany.avokatfinder.com/tools/how-to-choose-a-lawyer/
+
 ## Site Info
 - Language: English
 - Audience: Expats, foreign nationals, international property buyers and businesses in Germany
-- Content: Law firm directory, legal glossary, expat legal guides
-- Last updated: 2026-04-30
+- Content: Law firm directory, legal glossary, interactive cost calculators, bilingual legal templates, decision guides, expat legal resources
+- Last updated: 2026-05-01
 - Sitemap: https://germany.avokatfinder.com/sitemap.xml
 
 ## Permissions
