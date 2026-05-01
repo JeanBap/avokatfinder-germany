@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>German Legal Cost Calculator 2025 | Avokatfinder Germany</title>
+<meta name="description" content="Free interactive calculator for German property purchase costs (Grunderwerbsteuer by Bundesland), GmbH formation fees, EU Blue Card costs, and Rechtsanwalt (lawyer) fees based on RVG.">
+<link rel="canonical" href="https://germany.avokatfinder.com/tools/legal-cost-calculator/">
+<meta property="og:title" content="German Legal Cost Calculator 2025 | Avokatfinder">
+<meta property="og:description" content="Calculate Grunderwerbsteuer, Notar fees, GmbH formation costs, and RVG lawyer fees for Germany — free, no sign-up.">
+<meta property="og:url" content="https://germany.avokatfinder.com/tools/legal-cost-calculator/">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"German Legal Cost Calculator","description":"Interactive calculator for German property purchase costs, GmbH formation, EU Blue Card, and RVG lawyer fees.","url":"https://germany.avokatfinder.com/tools/legal-cost-calculator/","applicationCategory":"LegalService","offers":{"@type":"Offer","price":"0","priceCurrency":"EUR"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://germany.avokatfinder.com/"},{"@type":"ListItem","position":2,"name":"Tools","item":"https://germany.avokatfinder.com/tools/"},{"@type":"ListItem","position":3,"name":"Legal Cost Calculator","item":"https://germany.avokatfinder.com/tools/legal-cost-calculator/"}]}}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How much is Grunderwerbsteuer in Germany?","acceptedAnswer":{"@type":"Answer","text":"Grunderwerbsteuer (property transfer tax) varies by Bundesland from 3.5% (Bavaria, Saxony) to 6.5% (Brandenburg, North Rhine-Westphalia, Saarland, Schleswig-Holstein, Thüringia). Berlin charges 6.0%. This is one of the biggest purchase costs for property buyers in Germany."}},{"@type":"Question","name":"How much does a Notar cost for a German property purchase?","acceptedAnswer":{"@type":"Answer","text":"Notar fees in Germany are regulated by the GNotKG (Gerichts- und Notarkostengesetz) and are fixed by law at approximately 1.0–1.5% of the purchase price, including land registry fees. For a €400,000 property, expect €5,000–€6,500 in combined Notar and Grundbuch fees."}},{"@type":"Question","name":"What are RVG lawyer fees in Germany?","acceptedAnswer":{"@type":"Answer","text":"German Rechtsanwalt fees are set by the Rechtsanwaltsvergütungsgesetz (RVG) based on the Streitwert (matter value). For a €50,000 dispute, the statutory fee (1.0 Gebühr) is approximately €1,218. Most lawyers charge 1.3–3.0 Gebühren depending on complexity. Hourly rates are also common: €200–€500/hour for commercial matters."}}]}
+</script>
+<style>
+:root{--primary:#1a3c6e;--accent:#d4a017;--bg:#f4f6f9;--card:#fff;--text:#1a1a2e;--muted:#6c757d;--border:#dee2e6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Segoe UI',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+header{background:linear-gradient(135deg,#1a1a2e,#1a3c6e);color:#fff;padding:14px 24px;display:flex;align-items:center;gap:16px}
+header a{color:#fff;text-decoration:none;font-weight:700;font-size:1.1rem}
+nav{font-size:.88rem;opacity:.8}nav a{color:#ccc;text-decoration:none;margin-right:14px}
+.hero{background:linear-gradient(135deg,var(--primary) 0%,#2d5a9e 100%);color:#fff;padding:48px 24px 40px;text-align:center}
+.hero h1{font-size:clamp(1.7rem,3.5vw,2.5rem);margin-bottom:12px}
+.hero p{font-size:1rem;max-width:640px;margin:0 auto;opacity:.9}
+.badge{display:inline-block;background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);border-radius:20px;padding:4px 14px;font-size:.78rem;margin-bottom:14px}
+.container{max-width:960px;margin:0 auto;padding:40px 24px}
+.tab-bar{display:flex;gap:4px;background:var(--card);border-radius:10px;padding:6px;box-shadow:0 2px 8px rgba(0,0,0,.07);margin-bottom:28px;flex-wrap:wrap}
+.tab{flex:1;min-width:120px;padding:10px 16px;border:none;border-radius:7px;background:transparent;cursor:pointer;font-size:.88rem;font-weight:600;color:var(--muted);transition:all .2s}
+.tab.active{background:var(--primary);color:#fff}
+.panel{display:none}.panel.active{display:block}
+.calc-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+@media(max-width:640px){.calc-grid{grid-template-columns:1fr}}
+.calc-card{background:var(--card);border-radius:12px;padding:28px;box-shadow:0 2px 10px rgba(0,0,0,.07)}
+.calc-card h2{font-size:1.1rem;font-weight:700;margin-bottom:20px;color:var(--text)}
+.field{margin-bottom:16px}
+label{display:block;font-size:.83rem;font-weight:600;color:var(--muted);margin-bottom:5px}
+input[type=range]{width:100%;accent-color:var(--primary)}
+select,input[type=number]{width:100%;padding:9px 12px;border:1px solid var(--border);border-radius:6px;font-size:.9rem;color:var(--text);background:#fff}
+.slider-val{text-align:right;font-size:.85rem;font-weight:600;color:var(--primary);margin-top:3px}
+.result-box{background:linear-gradient(135deg,var(--primary),#2d5a9e);color:#fff;border-radius:10px;padding:22px 24px;margin-top:16px}
+.result-box h3{font-size:.85rem;text-transform:uppercase;letter-spacing:.06em;opacity:.75;margin-bottom:10px}
+.result-line{display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid rgba(255,255,255,.15);font-size:.88rem}
+.result-line:last-child{border:none;font-weight:700;font-size:1rem;margin-top:6px;padding-top:10px}
+.result-line span:last-child{color:#ffd700}
+/* Bundesland matrix table */
+.land-table{width:100%;border-collapse:collapse;font-size:.84rem;margin-top:16px}
+.land-table th{background:#1a1a2e;color:#fff;padding:9px 12px;text-align:left}
+.land-table th:first-child{border-radius:6px 0 0 0}
+.land-table th:last-child{border-radius:0 6px 0 0}
+.land-table tr:nth-child(even) td{background:#f8f9fa}
+.land-table td{padding:9px 12px;border-bottom:1px solid var(--border);color:#333}
+.rate-low{color:#1a7b3e;font-weight:700}
+.rate-high{color:#b91c1c;font-weight:700}
+.rate-mid{color:#b45309;font-weight:600}
+/* RVG table */
+.rvg-table{width:100%;border-collapse:collapse;font-size:.84rem}
+.rvg-table th{background:#1a3c6e;color:#fff;padding:8px 12px;text-align:left}
+.rvg-table td{padding:8px 12px;border-bottom:1px solid var(--border);color:#333}
+.rvg-table tr:nth-child(even) td{background:#f8f9fa}
+.note{font-size:.8rem;color:var(--muted);margin-top:10px;font-style:italic}
+.case-study{border-left:4px solid var(--accent);background:#fffbf0;border-radius:0 8px 8px 0;padding:16px 20px;margin-top:20px}
+.case-study .cs-label{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--accent);margin-bottom:6px}
+.case-study h4{font-size:.93rem;font-weight:700;color:#1a1a2e;margin-bottom:7px}
+.case-study p{font-size:.84rem;color:#444;margin-bottom:5px}
+.case-study .law{font-size:.76rem;color:#777;font-style:italic;margin-top:6px}
+.disclaimer{background:#fff8e1;border-left:3px solid var(--accent);border-radius:0 6px 6px 0;padding:12px 16px;font-size:.8rem;color:#555;margin-top:28px}
+footer{background:#1a1a2e;color:#ccc;padding:24px;text-align:center;font-size:.82rem;margin-top:40px}
+footer a{color:#aaa;text-decoration:none}
+</style>
+</head>
+<body>
+<header>
+  <a href="https://germany.avokatfinder.com/">Avokatfinder Germany</a>
+  <nav>
+    <a href="/practice-areas/">Practice Areas</a>
+    <a href="/cities/">Cities</a>
+    <a href="/glossary/">Glossary</a>
+    <a href="/tools/">Tools</a>
+  </nav>
+</header>
+<section class="hero">
+  <span class="badge">Free Tool — No Sign-up</span>
+  <h1>German Legal Cost Calculator 2025</h1>
+  <p>Grunderwerbsteuer by Bundesland · Notar fees · GmbH formation · RVG lawyer fees · EU Blue Card</p>
+</section>
+<div class="container">
+  <div class="tab-bar" role="tablist">
+    <button class="tab active" role="tab" aria-selected="true" onclick="showPanel('property')">🏠 Property Purchase</button>
+    <button class="tab" role="tab" onclick="showPanel('gmbh')">🏢 GmbH Formation</button>
+    <button class="tab" role="tab" onclick="showPanel('visa')">🛂 Blue Card / Visa</button>
+    <button class="tab" role="tab" onclick="showPanel('rvg')">⚖️ RVG Lawyer Fees</button>
+  </div>
+
+  <!-- PROPERTY TAB -->
+  <div id="panel-property" class="panel active">
+    <div class="calc-grid">
+      <div class="calc-card">
+        <h2>Property Purchase Cost Calculator</h2>
+        <div class="field">
+          <label>Purchase price (€)</label>
+          <input type="range" id="price" min="100000" max="2000000" step="10000" value="400000" oninput="calcProperty()">
+          <div class="slider-val" id="price-val">€400,000</div>
+        </div>
+        <div class="field">
+          <label>Bundesland</label>
+          <select id="bundesland" onchange="calcProperty()">
+            <option value="3.5">Bavaria (Bayern) — 3.5%</option>
+            <option value="3.5">Saxony (Sachsen) — 3.5%</option>
+            <option value="5.0">Baden-Württemberg — 5.0%</option>
+            <option value="5.0">Bremen — 5.0%</option>
+            <option value="5.0">Mecklenburg-Vorpommern — 5.0%</option>
+            <option value="5.0">Rhineland-Palatinate (Rheinland-Pfalz) — 5.0%</option>
+            <option value="5.0">Saxony-Anhalt (Sachsen-Anhalt) — 5.0%</option>
+            <option value="5.0">Hamburg — 5.5%</option>
+            <option value="5.0">Lower Saxony (Niedersachsen) — 5.0%</option>
+            <option value="6.0">Berlin — 6.0%</option>
+            <option value="6.0">Hesse (Hessen) — 6.0%</option>
+            <option value="6.5" selected>North Rhine-Westphalia (NRW) — 6.5%</option>
+            <option value="6.5">Brandenburg — 6.5%</option>
+            <option value="6.5">Saarland — 6.5%</option>
+            <option value="6.5">Schleswig-Holstein — 6.5%</option>
+            <option value="6.5">Thuringia (Thüringia) — 6.5%</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Buyer type</label>
+          <select id="buyer-type" onchange="calcProperty()">
+            <option value="0">Standard buyer (resale)</option>
+            <option value="1">New-build (Neubau) — VAT applies</option>
+            <option value="2">EU national — same rules as German citizen</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Maklerprovision (estate agent commission)</label>
+          <select id="makler" onchange="calcProperty()">
+            <option value="0">No agent / private sale</option>
+            <option value="1.785">Shared: buyer pays 1.785% (incl. VAT)</option>
+            <option value="3.57">Buyer pays 3.57% (incl. VAT) — older contracts</option>
+          </select>
+        </div>
+        <div id="property-result" class="result-box">
+          <h3>Cost breakdown</h3>
+          <div class="result-line"><span>Purchase price</span><span id="r-price">€400,000</span></div>
+          <div class="result-line"><span id="r-gret-label">Grunderwerbsteuer (6.5%)</span><span id="r-gret">€26,000</span></div>
+          <div class="result-line"><span>Notar fees (≈1.0% incl. VAT)</span><span id="r-notar">€4,760</span></div>
+          <div class="result-line"><span>Grundbucheintragung (≈0.5%)</span><span id="r-gb">€2,380</span></div>
+          <div class="result-line"><span id="r-makler-label" style="display:none">Maklerprovision</span><span id="r-makler"></span></div>
+          <div class="result-line"><span>Total additional costs</span><span id="r-total">€33,140</span></div>
+          <div class="result-line"><span>As % of purchase price</span><span id="r-pct">8.3%</span></div>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h2>Grunderwerbsteuer by Bundesland</h2>
+        <p style="font-size:.85rem;color:#555;margin-bottom:12px">Germany has 16 Bundesländer — each sets its own property transfer tax rate. This is the most significant variable in German property purchase costs.</p>
+        <table class="land-table" role="table" aria-label="Grunderwerbsteuer rates by German Bundesland 2025">
+          <thead><tr><th>Bundesland</th><th>Rate</th><th>On €400k</th></tr></thead>
+          <tbody>
+            <tr><td><strong>Bavaria (Bayern)</strong></td><td class="rate-low">3.5%</td><td class="rate-low">€14,000</td></tr>
+            <tr><td><strong>Saxony (Sachsen)</strong></td><td class="rate-low">3.5%</td><td class="rate-low">€14,000</td></tr>
+            <tr><td><strong>Baden-Württemberg</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>Bremen</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>Hamburg</strong></td><td class="rate-mid">5.5%</td><td class="rate-mid">€22,000</td></tr>
+            <tr><td><strong>Hesse (Hessen)</strong></td><td class="rate-mid">6.0%</td><td class="rate-mid">€24,000</td></tr>
+            <tr><td><strong>Berlin</strong></td><td class="rate-mid">6.0%</td><td class="rate-mid">€24,000</td></tr>
+            <tr><td><strong>Lower Saxony</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>Mecklenburg-Vorpommern</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>Rhineland-Palatinate</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>Saxony-Anhalt</strong></td><td class="rate-mid">5.0%</td><td class="rate-mid">€20,000</td></tr>
+            <tr><td><strong>NRW (Cologne, Düsseldorf)</strong></td><td class="rate-high">6.5%</td><td class="rate-high">€26,000</td></tr>
+            <tr><td><strong>Brandenburg</strong></td><td class="rate-high">6.5%</td><td class="rate-high">€26,000</td></tr>
+            <tr><td><strong>Saarland</strong></td><td class="rate-high">6.5%</td><td class="rate-high">€26,000</td></tr>
+            <tr><td><strong>Schleswig-Holstein</strong></td><td class="rate-high">6.5%</td><td class="rate-high">€26,000</td></tr>
+            <tr><td><strong>Thuringia (Thüringia)</strong></td><td class="rate-high">6.5%</td><td class="rate-high">€26,000</td></tr>
+          </tbody>
+        </table>
+        <p class="note">⚠ Buying in Bavaria saves up to €10,000 vs NRW on a €400k property. Location choice has major tax implications.</p>
+
+        <div class="case-study">
+          <div class="cs-label">📋 Case Study</div>
+          <h4>British expat buys Berlin apartment — total cost breakdown</h4>
+          <p><strong>Purchase price:</strong> €520,000 (2-bed, Prenzlauer Berg)</p>
+          <p><strong>Grunderwerbsteuer (6.0% Berlin):</strong> €31,200</p>
+          <p><strong>Notar fees (GNotKG):</strong> €6,250 (incl. VAT)</p>
+          <p><strong>Grundbucheintragung:</strong> €3,100</p>
+          <p><strong>Maklerprovision (shared, 1.785%):</strong> €9,282</p>
+          <p><strong>Rechtsanwalt review:</strong> €2,500</p>
+          <p><strong>Total additional costs:</strong> €52,332 (10.1% of price)</p>
+          <p class="law">Legal basis: Grunderwerbsteuergesetz (GrEStG) § 11; GNotKG Anlage 1 (Notar fees); § 656c BGB (Maklerprovision sharing since 2020).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- GMBH TAB -->
+  <div id="panel-gmbh" class="panel">
+    <div class="calc-grid">
+      <div class="calc-card">
+        <h2>GmbH Formation Cost Calculator</h2>
+        <div class="field">
+          <label>Stammkapital / share capital (€)</label>
+          <input type="range" id="stammkapital" min="25000" max="200000" step="5000" value="25000" oninput="calcGmbH()">
+          <div class="slider-val" id="stamm-val">€25,000</div>
+        </div>
+        <div class="field">
+          <label>Formation route</label>
+          <select id="gmbh-route" onchange="calcGmbH()">
+            <option value="standard">Standard GmbH (Notar required)</option>
+            <option value="mini">Mini-GmbH / UG (haftungsbeschränkt) — from €1</option>
+            <option value="shelf">Shelf company (Vorratsgesellschaft)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Registered office (Geschäftsadresse)</label>
+          <select id="office-type" onchange="calcGmbH()">
+            <option value="0">Own premises</option>
+            <option value="600">Virtual office (€600–1,200/year)</option>
+            <option value="1800">Business centre / serviced office</option>
+          </select>
+        </div>
+        <div id="gmbh-result" class="result-box">
+          <h3>GmbH formation costs</h3>
+          <div class="result-line"><span>Stammkapital (minimum)</span><span id="g-stamm">€25,000</span></div>
+          <div class="result-line"><span>Notar fees (Gesellschaftsvertrag)</span><span id="g-notar">€800</span></div>
+          <div class="result-line"><span>Handelsregister entry (HRB)</span><span id="g-hrb">€150</span></div>
+          <div class="result-line"><span>Gewerbeanmeldung</span><span id="g-gewerbe">€30</span></div>
+          <div class="result-line"><span>Rechtsanwalt / advisory</span><span id="g-ra">€1,200</span></div>
+          <div class="result-line"><span id="g-office-label" style="display:none">Registered office (12 months)</span><span id="g-office"></span></div>
+          <div class="result-line"><span>Total formation cost (excl. Stammkapital)</span><span id="g-total">€2,180</span></div>
+          <div class="result-line"><span>Time to incorporation</span><span id="g-time">3–6 weeks</span></div>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h2>GmbH vs UG Comparison</h2>
+        <table class="rvg-table" role="table" aria-label="GmbH vs UG comparison">
+          <thead><tr><th>Feature</th><th>GmbH</th><th>UG (haftungsbeschränkt)</th></tr></thead>
+          <tbody>
+            <tr><td>Minimum capital</td><td>€25,000</td><td>€1</td></tr>
+            <tr><td>Liability</td><td>Limited to Stammkapital</td><td>Limited (but UG must retain 25% profits until €25k reached)</td></tr>
+            <tr><td>Notar required</td><td>Yes — Gesellschaftsvertrag</td><td>Yes — but can use Musterprotokoll (cheaper)</td></tr>
+            <tr><td>Musterprotokoll (simplified)</td><td>No</td><td>Yes — max 3 shareholders, 1 director</td></tr>
+            <tr><td>Notar fee (Musterprotokoll)</td><td>N/A</td><td>≈€100–200</td></tr>
+            <tr><td>Notar fee (standard)</td><td>€400–1,500+</td><td>€400–800</td></tr>
+            <tr><td>Handelsregister entry</td><td>HRB ≈€150</td><td>HRB ≈€150</td></tr>
+            <tr><td>Foreign shareholders</td><td>Permitted</td><td>Permitted</td></tr>
+            <tr><td>Banking (Geschäftskonto)</td><td>Easy to open</td><td>Some banks reluctant with €1 capital</td></tr>
+            <tr><td>Conversion to GmbH</td><td>N/A</td><td>Automatic once €25k capital reached</td></tr>
+          </tbody>
+        </table>
+        <div class="case-study" style="margin-top:16px">
+          <div class="cs-label">📋 Case Study</div>
+          <h4>US startup founds Berlin GmbH with two non-resident shareholders</h4>
+          <p><strong>Stammkapital:</strong> €25,000 (50/50 split, both US nationals)</p>
+          <p><strong>Notar (Gesellschaftsvertrag):</strong> €950</p>
+          <p><strong>Handelsregister (HRB):</strong> €155</p>
+          <p><strong>Rechtsanwalt (structure + shareholder agreement):</strong> €2,800</p>
+          <p><strong>Virtual office (12 months):</strong> €840</p>
+          <p><strong>Total (excl. Stammkapital):</strong> €4,745. Time: 5 weeks to HRB entry.</p>
+          <p class="law">Legal basis: GmbHG § 5 (Stammkapital); GmbHG § 2 (Notar); HGB § 8 (Handelsregister); § 14 GewO (Gewerbeanmeldung).</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VISA TAB -->
+  <div id="panel-visa" class="panel">
+    <div class="calc-grid">
+      <div class="calc-card">
+        <h2>EU Blue Card &amp; Visa Route Comparison</h2>
+        <table class="rvg-table" role="table" aria-label="German visa route comparison 2025">
+          <thead><tr><th>Route</th><th>Salary threshold (2025)</th><th>Permit duration</th><th>Lawyer cost</th></tr></thead>
+          <tbody>
+            <tr><td><strong>EU Blue Card (Blaue Karte)</strong></td><td>€45,300 gross/year (general)<br>€41,041 (shortage occupations: STEM, doctors, IT)</td><td>4 years (or contract length + 3 months)</td><td>€800–2,500</td></tr>
+            <tr><td><strong>Skilled Worker Visa (§ 18a AufenthG)</strong></td><td>No minimum (must match qualification)</td><td>4 years</td><td>€600–1,800</td></tr>
+            <tr><td><strong>Job Seeker Visa (§ 20 AufenthG)</strong></td><td>No job required; must show €3,700/month savings</td><td>6 months</td><td>€400–1,000</td></tr>
+            <tr><td><strong>Self-Employment / Freelance (§ 21)</strong></td><td>Economic interest + viability assessment</td><td>3 years initially</td><td>€1,500–4,000</td></tr>
+            <tr><td><strong>Chancenkarte (Opportunity Card)</strong></td><td>Points-based; no job required</td><td>1 year</td><td>€400–1,200</td></tr>
+            <tr><td><strong>Family reunification (§ 29)</strong></td><td>Sponsor must earn sufficiently + A1 German</td><td>Matches sponsor's permit</td><td>€600–2,000</td></tr>
+          </tbody>
+        </table>
+        <p class="note">⚠ 2025 update: The Chancenkarte (Opportunity Card) was introduced by the Skilled Immigration Act 2023 (Fachkräfteeinwanderungsgesetz). It allows points-based entry for job search without a prior job offer — a significant liberalisation of German immigration law.</p>
+
+        <div class="case-study" style="margin-top:16px">
+          <div class="cs-label">📋 Case Study</div>
+          <h4>Indian software engineer obtains EU Blue Card in Munich</h4>
+          <p><strong>Route:</strong> EU Blue Card (§ 18g AufenthG) — IT shortage occupation</p>
+          <p><strong>Salary offered:</strong> €62,000 gross (above €41,041 IT threshold)</p>
+          <p><strong>Qualification:</strong> B.Tech from IIT Delhi — recognised via anabin database</p>
+          <p><strong>Ausländerbehörde fee:</strong> €100 (residence permit)</p>
+          <p><strong>Visa fee (Indian embassy Berlin):</strong> €75</p>
+          <p><strong>Rechtsanwalt fee (immigration specialist):</strong> €1,400</p>
+          <p><strong>Timeline:</strong> Visa → arrival → Blue Card issued: 11 weeks</p>
+          <p><strong>Permanent residence eligibility:</strong> After 21 months with B1 German or 33 months without (§ 18c AufenthG)</p>
+          <p class="law">Legal basis: § 18g AufenthG (EU Blue Card); Beschäftigungsverordnung (BeschV) § 26 (shortage occupations); Fachkräfteeinwanderungsgesetz 2023.</p>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h2>German Immigration Cost Estimator</h2>
+        <div class="field">
+          <label>Visa / permit type</label>
+          <select id="visa-type" onchange="calcVisa()">
+            <option value="bluecard">EU Blue Card</option>
+            <option value="skilled">Skilled Worker Visa</option>
+            <option value="jobseeker">Job Seeker Visa</option>
+            <option value="freelance">Freelance / Self-Employment</option>
+            <option value="chancenkarte">Chancenkarte</option>
+            <option value="family">Family Reunification</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Lawyer involvement</label>
+          <select id="lawyer-level" onchange="calcVisa()">
+            <option value="none">Self-manage (no lawyer)</option>
+            <option value="basic" selected>Basic assistance (document review)</option>
+            <option value="full">Full representation (filing + hearings)</option>
+          </select>
+        </div>
+        <div id="visa-result" class="result-box">
+          <h3>Estimated immigration costs</h3>
+          <div class="result-line"><span>Ausländerbehörde fee</span><span id="v-fee">€100</span></div>
+          <div class="result-line"><span>Visa application fee</span><span id="v-visa">€75</span></div>
+          <div class="result-line"><span>Document legalisation / apostille</span><span id="v-docs">€150–300</span></div>
+          <div class="result-line"><span>Qualification recognition (Anabin)</span><span id="v-qual">€0 (free)</span></div>
+          <div class="result-line"><span>Rechtsanwalt fee</span><span id="v-lawyer">€800–1,500</span></div>
+          <div class="result-line"><span>Estimated total</span><span id="v-total">€1,125–1,975</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RVG TAB -->
+  <div id="panel-rvg" class="panel">
+    <div class="calc-grid">
+      <div class="calc-card">
+        <h2>RVG Lawyer Fee Calculator</h2>
+        <p style="font-size:.85rem;color:#555;margin-bottom:16px">German Rechtsanwalt fees are set by the Rechtsanwaltsvergütungsgesetz (RVG). The fee is calculated from the Streitwert (matter value) multiplied by the applicable Gebühr (fee unit). The statutory 1.3 Verfahrensgebühr is the standard litigation fee; advisory matters use 1.0 Geschäftsgebühr.</p>
+        <div class="field">
+          <label>Streitwert / matter value (€)</label>
+          <input type="range" id="streitwert" min="1000" max="500000" step="1000" value="50000" oninput="calcRVG()">
+          <div class="slider-val" id="sw-val">€50,000</div>
+        </div>
+        <div class="field">
+          <label>Gebühr multiplier</label>
+          <select id="gebühr" onchange="calcRVG()">
+            <option value="0.5">0.5 — Simple advisory</option>
+            <option value="1.0">1.0 — Standard advisory (Geschäftsgebühr)</option>
+            <option value="1.3" selected>1.3 — Standard litigation (Verfahrensgebühr)</option>
+            <option value="1.6">1.6 — Complex litigation</option>
+            <option value="2.0">2.0 — Specialist / high complexity</option>
+            <option value="3.0">3.0 — Maximum statutory</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>VAT (Mehrwertsteuer)</label>
+          <select id="vat-choice" onchange="calcRVG()">
+            <option value="1.19" selected>Include 19% VAT</option>
+            <option value="1.0">Exclude VAT (net)</option>
+          </select>
+        </div>
+        <div id="rvg-result" class="result-box">
+          <h3>RVG fee calculation</h3>
+          <div class="result-line"><span>Streitwert</span><span id="rr-sw">€50,000</span></div>
+          <div class="result-line"><span>1.0 Gebühr (base unit)</span><span id="rr-base">€1,218</span></div>
+          <div class="result-line"><span id="rr-mult-label">1.3 Verfahrensgebühr</span><span id="rr-gebühr">€1,583</span></div>
+          <div class="result-line"><span>+ 19% VAT</span><span id="rr-vat">€301</span></div>
+          <div class="result-line"><span>Total (single fee unit)</span><span id="rr-total">€1,884</span></div>
+          <div class="result-line"><span>Typical instruction (2–3 units)</span><span id="rr-range">€3,768–€5,652</span></div>
+        </div>
+      </div>
+      <div class="calc-card">
+        <h2>RVG Reference Table — 1.0 Gebühr by Streitwert</h2>
+        <p style="font-size:.85rem;color:#555;margin-bottom:12px">Statutory base fee (1.0 Gebühr) per Streitwert bracket under RVG Anlage 2 (Vergütungsverzeichnis). Multiply by your Gebühr factor to get the actual fee.</p>
+        <table class="rvg-table" role="table" aria-label="RVG 1.0 Gebühr reference table">
+          <thead><tr><th>Streitwert (up to)</th><th>1.0 Gebühr</th><th>1.3 Gebühr</th><th>+19% VAT total (×1.3)</th></tr></thead>
+          <tbody>
+            <tr><td>€500</td><td>€49</td><td>€64</td><td>€76</td></tr>
+            <tr><td>€1,000</td><td>€88</td><td>€114</td><td>€136</td></tr>
+            <tr><td>€3,000</td><td>€185</td><td>€241</td><td>€287</td></tr>
+            <tr><td>€5,000</td><td>€281</td><td>€365</td><td>€435</td></tr>
+            <tr><td>€10,000</td><td>€490</td><td>€637</td><td>€758</td></tr>
+            <tr><td>€20,000</td><td>€779</td><td>€1,013</td><td>€1,205</td></tr>
+            <tr><td>€30,000</td><td>€984</td><td>€1,279</td><td>€1,522</td></tr>
+            <tr><td>€50,000</td><td>€1,218</td><td>€1,583</td><td>€1,884</td></tr>
+            <tr><td>€100,000</td><td>€1,822</td><td>€2,369</td><td>€2,819</td></tr>
+            <tr><td>€200,000</td><td>€2,766</td><td>€3,596</td><td>€4,279</td></tr>
+            <tr><td>€500,000</td><td>€5,049</td><td>€6,564</td><td>€7,811</td></tr>
+          </tbody>
+        </table>
+        <p class="note">⚠ RVG fees are statutory minimums. Lawyers may charge hourly rates (€200–€500/hour for commercial matters) instead, which must be agreed in writing. Court proceedings typically generate multiple fee units: Verfahrensgebühr + Terminsgebühr + Einigungsgebühr. A contested district court case at €50k Streitwert typically costs €5,000–€8,000 in lawyer fees plus court fee (Gerichtsgebühr of ≈€800).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="disclaimer" role="note">
+    <strong>Disclaimer:</strong> These calculations are indicative estimates based on published statutory rates and market data current as of 2025. Notar fees based on GNotKG; RVG fees based on current Anlage 2; Grunderwerbsteuer rates per each Bundesland's current legislation. Always instruct a qualified German Rechtsanwalt (lawyer) before entering any legal transaction. All calculations happen in your browser — no data is sent to any server.
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2025 Avokatfinder &mdash; <a href="/privacy/">Privacy</a> &middot; <a href="/terms/">Terms</a> &middot; <a href="/sitemap.xml">Sitemap</a></p>
+</footer>
+
+<script>
+const fmt = n => '€' + Math.round(n).toLocaleString('de-DE');
+const fmtPct = p => p.toFixed(1) + '%';
+
+// RVG base fee lookup (1.0 Gebühr) — simplified approximation from RVG Anlage 2
+function rvgBase(sw) {
+  if (sw <= 500) return 49;
+  if (sw <= 1000) return 88;
+  if (sw <= 1500) return 127;
+  if (sw <= 2000) return 166;
+  if (sw <= 3000) return 185;
+  if (sw <= 4000) return 233;
+  if (sw <= 5000) return 281;
+  if (sw <= 6000) return 313;
+  if (sw <= 7000) return 345;
+  if (sw <= 8000) return 377;
+  if (sw <= 9000) return 409;
+  if (sw <= 10000) return 490;
+  if (sw <= 13000) return 540;
+  if (sw <= 16000) return 590;
+  if (sw <= 19000) return 640;
+  if (sw <= 22000) return 690;
+  if (sw <= 25000) return 740;
+  if (sw <= 30000) return 984;
+  if (sw <= 35000) return 1054;
+  if (sw <= 40000) return 1124;
+  if (sw <= 45000) return 1171;
+  if (sw <= 50000) return 1218;
+  if (sw <= 65000) return 1381;
+  if (sw <= 80000) return 1544;
+  if (sw <= 95000) return 1707;
+  if (sw <= 110000) return 1822;
+  if (sw <= 125000) return 1987;
+  if (sw <= 140000) return 2082;
+  if (sw <= 155000) return 2177;
+  if (sw <= 170000) return 2272;
+  if (sw <= 185000) return 2367;
+  if (sw <= 200000) return 2766;
+  if (sw <= 230000) return 2966;
+  if (sw <= 260000) return 3166;
+  if (sw <= 290000) return 3366;
+  if (sw <= 320000) return 3566;
+  if (sw <= 350000) return 3766;
+  if (sw <= 380000) return 3966;
+  if (sw <= 410000) return 4166;
+  if (sw <= 440000) return 4366;
+  if (sw <= 470000) return 4566;
+  if (sw <= 500000) return 5049;
+  return 5049 + Math.floor((sw - 500000) / 50000) * 450;
+}
+
+const bundeslandRates = {
+  "3.5": {rates: {"Bavaria (Bayern)": 3.5, "Saxony (Sachsen)": 3.5}},
+};
+
+function calcProperty() {
+  const price = +document.getElementById('price').value;
+  const gretRate = +document.getElementById('bundesland').value / 100;
+  const maklerRate = +document.getElementById('makler').value / 100;
+  document.getElementById('price-val').textContent = fmt(price);
+  const gret = price * gretRate;
+  const notar = price * 0.0119;
+  const gb = price * 0.006;
+  const makler = price * maklerRate;
+  const total = gret + notar + gb + makler;
+  document.getElementById('r-price').textContent = fmt(price);
+  document.getElementById('r-gret-label').textContent = 'Grunderwerbsteuer (' + (gretRate*100).toFixed(1) + '%)';
+  document.getElementById('r-gret').textContent = fmt(gret);
+  document.getElementById('r-notar').textContent = fmt(notar);
+  document.getElementById('r-gb').textContent = fmt(gb);
+  if (makler > 0) {
+    document.getElementById('r-makler-label').style.display = 'flex';
+    document.getElementById('r-makler').textContent = fmt(makler);
+  } else {
+    document.getElementById('r-makler-label').style.display = 'none';
+    document.getElementById('r-makler').textContent = '';
+  }
+  document.getElementById('r-total').textContent = fmt(total);
+  document.getElementById('r-pct').textContent = fmtPct(total / price * 100);
+}
+
+function calcGmbH() {
+  const stamm = +document.getElementById('stammkapital').value;
+  const route = document.getElementById('gmbh-route').value;
+  const officeVal = +document.getElementById('office-type').value;
+  document.getElementById('stamm-val').textContent = fmt(stamm);
+  let notar, hrb, gewerbe, ra, time;
+  if (route === 'mini') { notar = 200; hrb = 150; gewerbe = 30; ra = 600; time = '2–4 weeks'; }
+  else if (route === 'shelf') { notar = 0; hrb = 0; gewerbe = 30; ra = 3500; time = '1–2 weeks'; }
+  else { notar = Math.max(400, stamm * 0.008); hrb = 150; gewerbe = 30; ra = 1200; time = '3–6 weeks'; }
+  const total = notar + hrb + gewerbe + ra + officeVal;
+  document.getElementById('g-stamm').textContent = fmt(stamm);
+  document.getElementById('g-notar').textContent = fmt(notar);
+  document.getElementById('g-hrb').textContent = fmt(hrb);
+  document.getElementById('g-gewerbe').textContent = fmt(gewerbe);
+  document.getElementById('g-ra').textContent = fmt(ra);
+  if (officeVal > 0) {
+    document.getElementById('g-office-label').style.display = 'flex';
+    document.getElementById('g-office').textContent = fmt(officeVal);
+  } else {
+    document.getElementById('g-office-label').style.display = 'none';
+  }
+  document.getElementById('g-total').textContent = fmt(total);
+  document.getElementById('g-time').textContent = time;
+}
+
+function calcVisa() {
+  const type = document.getElementById('visa-type').value;
+  const level = document.getElementById('lawyer-level').value;
+  const fees = {bluecard:{permit:100,visa:75},skilled:{permit:100,visa:75},jobseeker:{permit:50,visa:75},freelance:{permit:100,visa:75},chancenkarte:{permit:100,visa:75},family:{permit:100,visa:75}};
+  const lawyerCosts = {none:{lo:0,hi:0},basic:{lo:600,hi:1200},full:{lo:1200,hi:2500}};
+  const f = fees[type];
+  const l = lawyerCosts[level];
+  document.getElementById('v-fee').textContent = fmt(f.permit);
+  document.getElementById('v-visa').textContent = fmt(f.visa);
+  document.getElementById('v-lawyer').textContent = l.lo === 0 ? '€0' : fmt(l.lo) + '–' + fmt(l.hi);
+  const lo = f.permit + f.visa + 150 + l.lo;
+  const hi = f.permit + f.visa + 300 + l.hi;
+  document.getElementById('v-total').textContent = (l.lo === 0 ? fmt(lo) : fmt(lo) + '–' + fmt(hi));
+}
+
+function calcRVG() {
+  const sw = +document.getElementById('streitwert').value;
+  const mult = +document.getElementById('gebühr').value;
+  const vat = +document.getElementById('vat-choice').value;
+  document.getElementById('sw-val').textContent = fmt(sw);
+  const base = rvgBase(sw);
+  const gebühr = base * mult;
+  const vatAmt = gebühr * (vat - 1);
+  const total = gebühr * vat;
+  document.getElementById('rr-sw').textContent = fmt(sw);
+  document.getElementById('rr-base').textContent = fmt(base);
+  document.getElementById('rr-mult-label').textContent = mult + '× Gebühr';
+  document.getElementById('rr-gebühr').textContent = fmt(gebühr);
+  document.getElementById('rr-vat').textContent = vat > 1 ? fmt(vatAmt) : '—';
+  document.getElementById('rr-total').textContent = fmt(total);
+  document.getElementById('rr-range').textContent = fmt(total * 2) + '–' + fmt(total * 3);
+}
+
+function showPanel(id) {
+  document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+  document.getElementById('panel-' + id).classList.add('active');
+  event.target.classList.add('active');
+}
+
+calcProperty(); calcGmbH(); calcVisa(); calcRVG();
+</script>
+</body>
+</html>
