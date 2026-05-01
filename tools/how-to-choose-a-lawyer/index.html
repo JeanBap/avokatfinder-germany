@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How to Choose a Lawyer in Germany: Rechtsanwalt vs Notar vs Steuerberater | AvokatFinder</title>
+<meta name="description" content="Interactive decision guide: find the right type of German lawyer for your situation. Rechtsanwalt, Fachanwalt, Notar, Steuerberater, Wirtschaftsprüfer — fee comparison, when you need each, RVG cost estimates.">
+<link rel="canonical" href="https://germany.avokatfinder.com/tools/how-to-choose-a-lawyer/">
+<meta property="og:title" content="How to Choose a Lawyer in Germany: Rechtsanwalt, Notar or Steuerberater?">
+<meta property="og:description" content="Interactive guide to choosing the right German legal professional. Compare fees, specialisms, and when each type is mandatory.">
+<meta property="og:url" content="https://germany.avokatfinder.com/tools/how-to-choose-a-lawyer/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebPage",
+  "name":"How to Choose a Lawyer in Germany",
+  "url":"https://germany.avokatfinder.com/tools/how-to-choose-a-lawyer/",
+  "description":"Interactive decision guide for choosing between Rechtsanwalt, Notar, Steuerberater, and Fachanwalt in Germany, with RVG fee estimates.",
+  "inLanguage":"en",
+  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://germany.avokatfinder.com/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://germany.avokatfinder.com/tools/"},
+    {"@type":"ListItem","position":3,"name":"How to Choose a Lawyer","item":"https://germany.avokatfinder.com/tools/how-to-choose-a-lawyer/"}
+  ]},
+  "publisher":{"@type":"Organization","name":"AvokatFinder","url":"https://avokatfinder.com"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is the difference between a Rechtsanwalt and a Notar in Germany?","acceptedAnswer":{"@type":"Answer","text":"A Rechtsanwalt (lawyer) represents clients in negotiations and court proceedings. A Notar (notary) is an independent officer of the court who authenticates legal documents and has no duty to either party. In Germany, notarisation is mandatory for real estate purchases, GmbH formations, marriage contracts, and inheritance waivers. Unlike in the UK, a Notar cannot represent you in litigation."}},
+    {"@type":"Question","name":"When do I need a Fachanwalt in Germany?","acceptedAnswer":{"@type":"Answer","text":"A Fachanwalt is a specialist lawyer who has completed additional training and case requirements in a specific area (e.g. Fachanwalt für Arbeitsrecht, Fachanwalt für Steuerrecht). You are not legally required to use a Fachanwalt, but for complex matters — employment dismissal, tax disputes with Finanzamt, complex immigration — a specialist typically achieves better outcomes. Germany has 24 recognised Fachanwalt specialisms."}},
+    {"@type":"Question","name":"How much does a Rechtsanwalt cost in Germany?","acceptedAnswer":{"@type":"Answer","text":"Under the RVG (Rechtsanwaltsvergütungsgesetz), statutory fees are based on the Streitwert (value in dispute). For a Streitwert of EUR 10,000 with a 1.3 Geschäftsgebühr, the fee is approximately EUR 725 (excl. VAT). Hourly rates in major German cities range from EUR 200–500/hour for experienced lawyers. Any fee above RVG rates must be agreed in writing (Vergütungsvereinbarung)."}},
+    {"@type":"Question","name":"Is a lawyer mandatory (Anwaltszwang) in German courts?","acceptedAnswer":{"@type":"Answer","text":"In the Landgericht (regional court, claims over EUR 5,000) and all higher courts, Anwaltszwang applies — you must be represented by a Rechtsanwalt. In the Amtsgericht (local court, claims up to EUR 5,000) and the Arbeitsgericht (labour court, first instance), you may represent yourself. Magistrates' courts and family law matters at Amtsgericht also allow self-representation."}},
+    {"@type":"Question","name":"What is Prozesskostenhilfe in Germany?","acceptedAnswer":{"@type":"Answer","text":"Prozesskostenhilfe (PKH) is legal aid for those who cannot afford litigation costs. It covers court fees and, where Anwaltszwang applies, lawyer fees. Eligibility is income-tested. The Rechtschutzversicherung (legal expenses insurance) is a popular alternative — monthly premiums from ~EUR 20 give access to legal advice and litigation funding."}}
+  ]
+}
+</script>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#f8f9fa;color:#1a1a2e;line-height:1.6}
+header{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:#fff;padding:2.5rem 1rem;text-align:center}
+header h1{font-size:clamp(1.5rem,4vw,2.2rem);font-weight:700;margin-bottom:.5rem}
+header p{opacity:.85;font-size:1rem;max-width:620px;margin:.5rem auto 0}
+main{max-width:920px;margin:2rem auto;padding:0 1rem}
+.tl-dr{background:#e8f4f8;border-left:4px solid #0f3460;padding:1rem 1.2rem;border-radius:0 8px 8px 0;margin-bottom:2rem}
+.tl-dr strong{color:#0f3460;font-size:.8rem;text-transform:uppercase;letter-spacing:.05em;display:block;margin-bottom:.3rem}
+/* Decision Tree */
+.tree-section{background:#fff;border:1px solid #e9ecef;border-radius:12px;padding:1.5rem;margin-bottom:2rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.tree-section h2{font-size:1.2rem;color:#0f3460;margin-bottom:1rem;display:flex;align-items:center;gap:.5rem}
+.q-card{background:#f8f9fa;border:2px solid #0f3460;border-radius:10px;padding:1.2rem;margin-bottom:.8rem;display:none}
+.q-card.active{display:block}
+.q-card h3{font-size:1rem;color:#0f3460;margin-bottom:.8rem}
+.q-btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.q-btn{padding:.55rem 1.1rem;border:2px solid #0f3460;border-radius:6px;cursor:pointer;background:#fff;font-size:.88rem;font-weight:600;color:#0f3460;transition:all .2s}
+.q-btn:hover{background:#0f3460;color:#fff}
+.result-card{background:#0f3460;color:#fff;border-radius:12px;padding:1.5rem;margin-top:1rem;display:none}
+.result-card.active{display:block}
+.result-card h3{font-size:1.1rem;font-weight:700;margin-bottom:.5rem}
+.result-card .subtitle{opacity:.85;font-size:.9rem;margin-bottom:1rem}
+.result-card .detail{background:rgba(255,255,255,.12);border-radius:8px;padding:.8rem 1rem;margin:.5rem 0;font-size:.88rem}
+.restart-btn{margin-top:1rem;background:#fff;color:#0f3460;border:none;padding:.6rem 1.4rem;border-radius:6px;cursor:pointer;font-weight:700;font-size:.9rem}
+.progress{font-size:.8rem;color:#666;margin-bottom:.5rem}
+/* Comparison Table */
+.compare-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.88rem}
+.compare-table th{background:#0f3460;color:#fff;padding:.65rem .8rem;text-align:left}
+.compare-table td{padding:.6rem .8rem;border-bottom:1px solid #e9ecef;vertical-align:top}
+.compare-table tr:nth-child(even) td{background:#f8f9fa}
+.tag{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.75rem;font-weight:700}
+.tag-mandatory{background:#ffebee;color:#c62828}
+.tag-optional{background:#e8f5e9;color:#2e7d32}
+.tag-specialist{background:#fff8e1;color:#e65100}
+/* Fee Calculator */
+.fee-section{background:#fff;border:1px solid #e9ecef;border-radius:12px;padding:1.5rem;margin-bottom:2rem;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.fee-section h2{font-size:1.2rem;color:#0f3460;margin-bottom:1rem}
+.calc-row{display:flex;gap:1rem;flex-wrap:wrap;align-items:flex-end;margin-bottom:1rem}
+.calc-field{flex:1;min-width:180px}
+.calc-field label{display:block;font-size:.85rem;font-weight:600;color:#555;margin-bottom:.3rem}
+.calc-field input,.calc-field select{width:100%;padding:.55rem .8rem;border:1.5px solid #dee2e6;border-radius:6px;font-size:.9rem}
+.calc-btn{background:#0f3460;color:#fff;border:none;padding:.6rem 1.4rem;border-radius:6px;cursor:pointer;font-size:.9rem;font-weight:700;white-space:nowrap}
+.fee-result{background:#e8f4f8;border-radius:8px;padding:1rem 1.2rem;margin-top:.8rem;display:none}
+.fee-result.show{display:block}
+.fee-row{display:flex;justify-content:space-between;padding:.3rem 0;border-bottom:1px solid #dee2e6;font-size:.9rem}
+.fee-row.total{font-weight:700;color:#0f3460;border-bottom:none;padding-top:.5rem;font-size:1rem}
+/* Fachanwalt grid */
+.fa-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:.8rem;margin:1rem 0}
+.fa-card{background:#f8f9fa;border:1px solid #dee2e6;border-radius:8px;padding:.8rem 1rem;font-size:.85rem}
+.fa-card strong{display:block;color:#0f3460;margin-bottom:.2rem}
+.fa-card span{color:#666;font-size:.8rem}
+/* Sections */
+.section-h{font-size:1.15rem;color:#0f3460;font-weight:700;margin:1.5rem 0 .8rem}
+footer{background:#1a1a2e;color:#ccc;text-align:center;padding:2rem 1rem;margin-top:3rem;font-size:.85rem}
+footer a{color:#90caf9;text-decoration:none}
+@media(max-width:600px){.compare-table{font-size:.78rem}.calc-row{flex-direction:column}}
+</style>
+</head>
+<body>
+<header>
+  <h1>How to Choose a Lawyer in Germany</h1>
+  <p>Rechtsanwalt, Notar, Fachanwalt, Steuerberater — find the right professional for your situation</p>
+</header>
+<main>
+
+<div class="tl-dr" itemscope itemtype="https://schema.org/SpeakableSpecification">
+  <strong>TL;DR</strong>
+  <p>Germany has distinct legal professionals: Rechtsanwalt (general lawyer), Fachanwalt (specialist), Notar (notary — mandatory for property/GmbH), Steuerberater (tax adviser). Courts above Amtsgericht require a Rechtsanwalt. Fees are governed by the RVG for statutory work; hourly rates EUR 200–500/hr in major cities.</p>
+</div>
+
+<!-- DECISION TREE -->
+<div class="tree-section">
+  <h2>🔍 Find the Right Legal Professional</h2>
+  <p class="progress" id="progress">Question 1 of up to 5</p>
+
+  <div class="q-card active" id="q1">
+    <h3>What is your primary legal need?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="next('q2a')">Buy / sell property or sign a mortgage</button>
+      <button class="q-btn" onclick="next('q2b')">Set up a company (GmbH, UG, AG)</button>
+      <button class="q-btn" onclick="next('q2c')">Employment issue (dismissal, contract, discrimination)</button>
+      <button class="q-btn" onclick="next('q2d')">Tax dispute or tax planning</button>
+      <button class="q-btn" onclick="next('q2e')">Immigration / visa / residency</button>
+      <button class="q-btn" onclick="next('q2f')">Litigation / court proceedings</button>
+      <button class="q-btn" onclick="next('q2g')">Divorce / family / inheritance</button>
+      <button class="q-btn" onclick="next('q2h')">Contract review or business dispute</button>
+    </div>
+  </div>
+
+  <!-- Property branch -->
+  <div class="q-card" id="q2a">
+    <h3>Is this a residential property purchase or a commercial / complex transaction?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_notar_property')">Residential purchase or standard sale</button>
+      <button class="q-btn" onclick="showResult('r_notar_ra_property')">Commercial, development, or dispute involved</button>
+    </div>
+  </div>
+
+  <!-- Company branch -->
+  <div class="q-card" id="q2b">
+    <h3>What type of entity?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_notar_gmbh')">GmbH or UG (limited liability)</button>
+      <button class="q-btn" onclick="showResult('r_ra_ag')">AG (public company) or complex restructuring</button>
+      <button class="q-btn" onclick="showResult('r_ra_partnership')">GbR, OHG, or KG (partnership)</button>
+    </div>
+  </div>
+
+  <!-- Employment branch -->
+  <div class="q-card" id="q2c">
+    <h3>How urgent is your matter?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_fa_arbeitsrecht_urgent')">Received a dismissal (Kündigung) — urgent!</button>
+      <button class="q-btn" onclick="showResult('r_fa_arbeitsrecht')">Contract review, discrimination, or wages dispute</button>
+    </div>
+  </div>
+
+  <!-- Tax branch -->
+  <div class="q-card" id="q2d">
+    <h3>Is this a dispute with the Finanzamt, or advisory / planning?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_fa_steuerrecht')">Dispute with Finanzamt / Einspruch / FG proceedings</button>
+      <button class="q-btn" onclick="showResult('r_steuerberater')">Tax returns, planning, or business accounting</button>
+    </div>
+  </div>
+
+  <!-- Immigration branch -->
+  <div class="q-card" id="q2e">
+    <h3>What type of immigration matter?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_fa_auslaenderrecht')">Visa refusal, deportation, or asylum</button>
+      <button class="q-btn" onclick="showResult('r_ra_bluecard')">EU Blue Card, work permit, or skilled worker visa</button>
+    </div>
+  </div>
+
+  <!-- Litigation branch -->
+  <div class="q-card" id="q2f">
+    <h3>What is the claim value?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_selfrepresent')">Under EUR 5,000 (Amtsgericht)</button>
+      <button class="q-btn" onclick="showResult('r_ra_litigation')">EUR 5,000–EUR 500,000 (Landgericht)</button>
+      <button class="q-btn" onclick="showResult('r_ra_oberlandes')">Over EUR 500,000 or appeal (OLG / BGH)</button>
+    </div>
+  </div>
+
+  <!-- Family branch -->
+  <div class="q-card" id="q2g">
+    <h3>What is the specific matter?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_fa_familienrecht')">Divorce, child custody, or maintenance</button>
+      <button class="q-btn" onclick="showResult('r_notar_inheritance')">Will, Erbvertrag, or inheritance waiver</button>
+      <button class="q-btn" onclick="showResult('r_fa_erbrecht')">Inheritance dispute or Pflichtteil claim</button>
+    </div>
+  </div>
+
+  <!-- Contract branch -->
+  <div class="q-card" id="q2h">
+    <h3>Is there a dispute or just a review?</h3>
+    <div class="q-btns">
+      <button class="q-btn" onclick="showResult('r_ra_contract_review')">Contract review, drafting, or NDA</button>
+      <button class="q-btn" onclick="showResult('r_ra_dispute')">Ongoing dispute or Abmahnung received</button>
+    </div>
+  </div>
+
+  <!-- Results -->
+  <div class="result-card" id="r_notar_property">
+    <h3>✅ You need: Notar (Notary)</h3>
+    <p class="subtitle">Property purchases in Germany require a Notar — this is mandatory under BGB § 311b. The Notar is neutral and cannot represent either party.</p>
+    <div class="detail">🔑 <strong>What the Notar does:</strong> Drafts the Kaufvertrag, checks land register (Grundbuch), coordinates Grunderwerbsteuer payment, and registers ownership. Both buyer and seller attend signing.</div>
+    <div class="detail">💶 <strong>Notar fees:</strong> Fixed by GNotKG based on purchase price. For EUR 400,000 property: approx. EUR 1,600–2,000 (Notar) + EUR 400–600 (Grundbuchamt). Plus Grunderwerbsteuer 3.5%–6.5% (varies by Bundesland).</div>
+    <div class="detail">⚠️ <strong>Note:</strong> If a legal dispute arises (e.g. seller misrepresented condition), you'll also need a Rechtsanwalt — Notare don't litigate.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_notar_ra_property">
+    <h3>✅ You need: Notar + Rechtsanwalt (Fachanwalt für Miet- und Wohnungseigentumsrecht)</h3>
+    <p class="subtitle">Commercial or disputed property transactions require both notarial authentication and specialist legal advice.</p>
+    <div class="detail">🏢 For commercial leases, development projects, or property disputes: a Fachanwalt für Miet- und WEG-Recht will protect your interests in negotiations and proceedings.</div>
+    <div class="detail">💶 Typical cost: Notar fees (GNotKG scale) + Rechtsanwalt EUR 300–500/hr or RVG scale. For EUR 2M commercial deal: Notar ~EUR 8,000–12,000; RA negotiation fees ~EUR 5,000–15,000.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_notar_gmbh">
+    <h3>✅ You need: Notar (+ optional Rechtsanwalt for complex structure)</h3>
+    <p class="subtitle">GmbH and UG formation requires a notarised Gesellschaftsvertrag (articles of association) under GmbHG § 2. UG can use the Musterprotokoll (standard template) — cheaper and faster.</p>
+    <div class="detail">🏢 <strong>UG (haftungsbeschränkt):</strong> EUR 1 minimum capital. Musterprotokoll: Notar fee ~EUR 100–200. Must retain 25% of annual profit until EUR 25,000 capital reached.</div>
+    <div class="detail">🏢 <strong>GmbH:</strong> EUR 25,000 minimum capital (EUR 12,500 paid in). Custom Satzung: Notar fee EUR 500–2,000 depending on complexity. Handelsregister fee ~EUR 150.</div>
+    <div class="detail">💡 For complex shareholder structures, IP rights, or investor terms, add a Fachanwalt für Gesellschaftsrecht to draft the Shareholder Agreement (Gesellschaftervereinbarung).</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_ag">
+    <h3>✅ You need: Fachanwalt für Gesellschaftsrecht + Wirtschaftsprüfer</h3>
+    <p class="subtitle">AG formations and complex restructurings require specialist corporate law advice and auditing.</p>
+    <div class="detail">💶 AG minimum capital: EUR 50,000. AG formation involves Gründungsbericht (founding report) audited by Wirtschaftsprüfer. Legal fees: EUR 10,000–50,000+ depending on complexity.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_partnership">
+    <h3>✅ You need: Rechtsanwalt (no Notar required for GbR/OHG)</h3>
+    <p class="subtitle">Partnerships (GbR, OHG, KG) do not require notarisation, but a written partnership agreement is strongly recommended.</p>
+    <div class="detail">📝 A Rechtsanwalt can draft a Gesellschaftsvertrag for EUR 500–2,000 depending on complexity. Without a written agreement, BGB § 705 default rules apply — often unfavourable.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_arbeitsrecht_urgent">
+    <h3>⚠️ URGENT: Fachanwalt für Arbeitsrecht — 3-WEEK DEADLINE</h3>
+    <p class="subtitle">You have 21 days from receipt of the dismissal letter to file a Kündigungsschutzklage (KSchG § 4). After this, the dismissal is deemed valid regardless of legality.</p>
+    <div class="detail">🚨 <strong>Do this today:</strong> Call a Fachanwalt für Arbeitsrecht or your Gewerkschaft (trade union). Many offer same-day appointments for dismissal matters.</div>
+    <div class="detail">💶 <strong>Legal aid:</strong> If you cannot afford a lawyer, apply for Beratungshilfe (legal advice) at your local Amtsgericht — costs only EUR 15.</div>
+    <div class="detail">📊 <strong>RVG fees:</strong> For Streitwert = 3 months' gross salary. E.g. EUR 4,500/month → Streitwert EUR 13,500 → 1.3 Verfahrensgebühr ~EUR 886 (excl. VAT). Many firms offer initial consultation ~EUR 190.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_arbeitsrecht">
+    <h3>✅ You need: Fachanwalt für Arbeitsrecht</h3>
+    <p class="subtitle">Employment contracts, discrimination, wage claims, maternity rights, and workplace disputes require specialist employment law advice.</p>
+    <div class="detail">💶 Initial consultation: EUR 150–250. Many firms offer flat-fee services for contract reviews (EUR 150–400 for standard employment contract review).</div>
+    <div class="detail">🏢 <strong>Rechtsschutzversicherung tip:</strong> Employment legal insurance costs ~EUR 5–15/month and covers most Arbeitsrecht disputes. Worth getting before you need it.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_steuerrecht">
+    <h3>✅ You need: Fachanwalt für Steuerrecht</h3>
+    <p class="subtitle">Tax disputes with the Finanzamt, Einspruch (objection) proceedings, and Finanzgericht (FG) cases require a Fachanwalt für Steuerrecht or a Steuerberater with litigation experience.</p>
+    <div class="detail">📋 <strong>Process:</strong> (1) File Einspruch within 1 month of tax assessment (§ 355 AO); (2) if rejected → appeal to Finanzgericht; (3) final appeal to Bundesfinanzhof (BFH) — Anwaltszwang applies at BFH level.</div>
+    <div class="detail">💶 FG proceedings: court fees based on disputed amount + lawyer fees (RVG or hourly). For EUR 30,000 disputed tax: total cost risk ~EUR 8,000–15,000.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_steuerberater">
+    <h3>✅ You need: Steuerberater (Tax Adviser)</h3>
+    <p class="subtitle">Tax returns, VAT, payroll, and annual accounts are handled by Steuerberater — they are not lawyers but are licensed for all tax advisory work.</p>
+    <div class="detail">💶 <strong>Fees:</strong> Governed by StBVV (Steuerberatervergütungsverordnung) for statutory services. Typical: EUR 80–200/hr. Annual accounts for a small GmbH: EUR 1,500–4,000.</div>
+    <div class="detail">🔗 <strong>Note:</strong> For tax disputes that escalate to FG/BFH, switch to a Fachanwalt für Steuerrecht — Steuerberater can represent at FG but not BGH level.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_auslaenderrecht">
+    <h3>✅ You need: Fachanwalt für Ausländer- und Asylrecht</h3>
+    <p class="subtitle">Visa refusals, deportation orders, and asylum proceedings are high-stakes — specialist advice is essential. Deadlines are often 2–4 weeks.</p>
+    <div class="detail">⏰ <strong>Deportation notice:</strong> File Antrag auf aufschiebende Wirkung immediately to suspend removal pending appeal (VwGO § 80). Same-day action may be required.</div>
+    <div class="detail">🏢 <strong>Free advice:</strong> Caritas, AWO, and Diakonie provide free immigration advice in most cities. Beratungshilfe available at Amtsgericht (EUR 15).</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_bluecard">
+    <h3>✅ You need: Rechtsanwalt (Immigration Specialist)</h3>
+    <p class="subtitle">EU Blue Card, Fachkräfteeinwanderungsgesetz skilled worker visas, and Niederlassungserlaubnis applications benefit from specialist immigration lawyers, though most straightforward cases can be handled without one.</p>
+    <div class="detail">📋 <strong>2025 thresholds:</strong> EU Blue Card: EUR 48,300 general / EUR 37,590 shortage occupations (STEM, healthcare, IT). Chancenkarte (opportunity card): 6 points needed.</div>
+    <div class="detail">💶 Lawyer fees for standard Blue Card application: EUR 500–1,500. Complex cases (employer + employee joint representation): EUR 2,000–5,000.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_selfrepresent">
+    <h3>✅ You can self-represent at Amtsgericht (optional: Rechtsanwalt)</h3>
+    <p class="subtitle">For claims under EUR 5,000, you may represent yourself at the Amtsgericht. However, a brief consultation (1 hour) with a Rechtsanwalt can significantly improve your position.</p>
+    <div class="detail">💶 <strong>Initial consultation:</strong> Many German lawyers offer a 1-hour consultation for EUR 150–250. The Erstberatungsgebühr is capped at EUR 190 incl. VAT under RVG § 34.</div>
+    <div class="detail">🏢 <strong>Schlichtung first:</strong> Consider a Schlichtungsstelle (arbitration board) — free or low-cost and faster than court. The Universalschlichtungsstelle des Bundes handles most B2C disputes.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_litigation">
+    <h3>✅ You need: Rechtsanwalt (Anwaltszwang applies)</h3>
+    <p class="subtitle">At Landgericht level (claims EUR 5,000+), you must be represented by a Rechtsanwalt. Both parties bear their own lawyers' costs if they win; loser pays all.</p>
+    <div class="detail">💶 For Streitwert EUR 50,000: statutory Verfahrensgebühr 1.3 = ~EUR 1,785 per side + court fees ~EUR 1,638. Total risk if you lose: ~EUR 7,000–10,000.</div>
+    <div class="detail">💡 Consider mediation (Mediation) first — courts actively encourage this under § 278a ZPO. Mediator fees: EUR 1,500–5,000 shared, much cheaper than litigation.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_oberlandes">
+    <h3>✅ You need: Specialist Rechtsanwalt with OLG/BGH admission</h3>
+    <p class="subtitle">Appeals at OLG and BGH require lawyers with specific experience and, at BGH level, special BGH Zulassung (only ~50 Rechtsanwälte are admitted to the BGH).</p>
+    <div class="detail">💶 BGH cases involve significant costs — total legal fees often EUR 30,000–200,000+ depending on complexity and duration.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_familienrecht">
+    <h3>✅ You need: Fachanwalt für Familienrecht</h3>
+    <p class="subtitle">Divorce, custody, and maintenance matters are handled in the Familiengericht (family court division of Amtsgericht). Anwaltszwang applies for divorce proceedings.</p>
+    <div class="detail">📋 <strong>Scheidung (divorce):</strong> Minimum 1-year Trennungszeit (separation period) required (§ 1565 BGB). Joint petition possible with one shared Anwalt — cheaper.</div>
+    <div class="detail">💶 For divorce with pension equalisation (Versorgungsausgleich) and no contested assets: total cost EUR 2,000–5,000. Contested divorce with asset dispute: EUR 10,000–50,000+.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_notar_inheritance">
+    <h3>✅ You need: Notar (for drafting) + optional Rechtsanwalt (for advice)</h3>
+    <p class="subtitle">Wills (Testamente), Erbverträge (inheritance contracts), and formal inheritance waivers require notarisation under BGB §§ 2231, 2276, 2348.</p>
+    <div class="detail">💶 Notar fees for a simple will: EUR 100–500. Erbvertrag with complex asset distribution: EUR 500–3,000+ depending on net estate value.</div>
+    <div class="detail">💡 A holographic (handwritten) will (eigenhändiges Testament) under BGB § 2247 does NOT require a Notar, but a Notar-drafted will is much harder to contest.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_fa_erbrecht">
+    <h3>✅ You need: Fachanwalt für Erbrecht</h3>
+    <p class="subtitle">Inheritance disputes, Pflichtteil (forced share) claims, and Erbausschlagung (inheritance disclaimer) require specialist estate law advice.</p>
+    <div class="detail">📋 <strong>Pflichtteil:</strong> Disinherited spouses and children are entitled to half their statutory share (BGB § 2303). Claim must be raised within 3 years (BGB § 2332).</div>
+    <div class="detail">💶 Fachanwalt für Erbrecht fees: RVG based on estate value. For EUR 200,000 estate: Verfahrensgebühr 1.3 ~EUR 2,350. Initial consultation ~EUR 190–250.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_contract_review">
+    <h3>✅ You need: Rechtsanwalt (Fachanwalt für IT-/Vertragsrecht for complex)</h3>
+    <p class="subtitle">Contract drafting and review is a core Rechtsanwalt service. For IT contracts, IP licensing, or SaaS agreements, a Fachanwalt für IT-Recht is preferable.</p>
+    <div class="detail">💶 Standard commercial contract review: EUR 200–600 flat fee. Complex technology or IP agreement: EUR 1,000–5,000. NDA drafting: EUR 150–400.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+
+  <div class="result-card" id="r_ra_dispute">
+    <h3>✅ You need: Rechtsanwalt — respond to Abmahnung within deadline</h3>
+    <p class="subtitle">An Abmahnung (cease and desist) typically demands response within 7–14 days. Ignoring it leads to injunction proceedings (einstweilige Verfügung) — much more expensive.</p>
+    <div class="detail">⚠️ Check the deadline carefully. If it's shorter than 7 days or received late, call a Rechtsanwalt immediately.</div>
+    <div class="detail">💶 Response to standard Abmahnung: EUR 300–800 flat fee. If einstweilige Verfügung is filed against you: EUR 2,000–8,000+ in court and lawyer fees.</div>
+    <button class="restart-btn" onclick="restart()">🔄 Start Over</button>
+  </div>
+</div>
+
+<!-- COMPARISON TABLE -->
+<h2 class="section-h">German Legal Professionals Compared</h2>
+<div style="overflow-x:auto">
+<table class="compare-table">
+  <thead>
+    <tr><th>Professional</th><th>Role</th><th>When Mandatory</th><th>Typical Fee</th><th>Regulator</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Rechtsanwalt</strong><br>(general lawyer)</td>
+      <td>Represents clients in negotiations, advice, and court</td>
+      <td><span class="tag tag-mandatory">Mandatory</span> Landgericht and above</td>
+      <td>RVG statutory or EUR 200–500/hr</td>
+      <td>Rechtsanwaltskammer</td>
+    </tr>
+    <tr>
+      <td><strong>Fachanwalt</strong><br>(specialist lawyer)</td>
+      <td>Specialist in one of 24 recognised areas (e.g. Arbeitsrecht, Steuerrecht)</td>
+      <td><span class="tag tag-optional">Optional</span> but recommended for complex matters</td>
+      <td>EUR 250–600/hr; RVG for standard matters</td>
+      <td>Rechtsanwaltskammer</td>
+    </tr>
+    <tr>
+      <td><strong>Notar</strong><br>(notary)</td>
+      <td>Independent officer who authenticates transactions; neutral (no advocacy)</td>
+      <td><span class="tag tag-mandatory">Mandatory</span> for property, GmbH, wills, marriage contracts</td>
+      <td>GNotKG scale (e.g. EUR 1,600 for EUR 400k property)</td>
+      <td>Notarkammer / Landesjustizbehörden</td>
+    </tr>
+    <tr>
+      <td><strong>Steuerberater</strong><br>(tax adviser)</td>
+      <td>Tax compliance, returns, accounts, VAT advisory</td>
+      <td><span class="tag tag-optional">Optional</span> (but essential for businesses)</td>
+      <td>StBVV scale or EUR 80–200/hr</td>
+      <td>Steuerberaterkammer</td>
+    </tr>
+    <tr>
+      <td><strong>Wirtschaftsprüfer</strong><br>(auditor)</td>
+      <td>Statutory audits, due diligence for large companies</td>
+      <td><span class="tag tag-mandatory">Mandatory</span> for AG, large GmbH (§ 316 HGB)</td>
+      <td>EUR 150–400/hr; project-based EUR 5,000+</td>
+      <td>Wirtschaftsprüferkammer</td>
+    </tr>
+    <tr>
+      <td><strong>Inkassobüro</strong><br>(debt collector)</td>
+      <td>Debt recovery (legally permitted under RDG)</td>
+      <td><span class="tag tag-optional">Optional</span></td>
+      <td>Success fee 15–35% or flat fee</td>
+      <td>Rechtsdienstleistungsregister</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<!-- RVG FEE CALCULATOR MINI -->
+<div class="fee-section">
+  <h2>💶 Quick RVG Fee Estimate</h2>
+  <p style="font-size:.88rem;color:#666;margin-bottom:1rem">Based on RVG Anlage 2 (§ 13). Estimates only — actual fees depend on matter complexity and agreement.</p>
+  <div class="calc-row">
+    <div class="calc-field">
+      <label>Streitwert (EUR)</label>
+      <input type="number" id="mini-sw" placeholder="e.g. 15000" min="500">
+    </div>
+    <div class="calc-field">
+      <label>Matter type</label>
+      <select id="mini-type">
+        <option value="consult">Initial consultation (Erstberatung)</option>
+        <option value="letter">Cease-and-desist / letter (1.3 Gebühr)</option>
+        <option value="court">Court proceedings, 1st instance (1.3+1.2)</option>
+        <option value="appeal">Appeal (1.6+1.2 Gebühr)</option>
+      </select>
+    </div>
+    <button class="calc-btn" onclick="calcMini()">Estimate</button>
+  </div>
+  <div class="fee-result" id="mini-result">
+    <div class="fee-row"><span>Base fee (Grundgebühr)</span><span id="mr-base">—</span></div>
+    <div class="fee-row"><span>Applied Gebühr multiplier</span><span id="mr-mult">—</span></div>
+    <div class="fee-row"><span>Net fee (excl. VAT)</span><span id="mr-net">—</span></div>
+    <div class="fee-row"><span>VAT (19%)</span><span id="mr-vat">—</span></div>
+    <div class="fee-row total"><span>Total incl. VAT</span><span id="mr-total">—</span></div>
+    <p style="font-size:.78rem;color:#555;margin-top:.5rem">Estimate only. Does not include court fees (Gerichtskosten), Auslagenpauschale EUR 20, or document costs. Hourly rate agreements may differ significantly.</p>
+  </div>
+</div>
+
+<!-- FACHANWALT SPECIALISMS -->
+<h2 class="section-h">Germany's 24 Fachanwalt Specialisms</h2>
+<div class="fa-grid">
+  <div class="fa-card"><strong>Arbeitsrecht</strong><span>Employment law</span></div>
+  <div class="fa-card"><strong>Familienrecht</strong><span>Family law</span></div>
+  <div class="fa-card"><strong>Steuerrecht</strong><span>Tax law</span></div>
+  <div class="fa-card"><strong>Strafrecht</strong><span>Criminal law</span></div>
+  <div class="fa-card"><strong>Verwaltungsrecht</strong><span>Administrative law</span></div>
+  <div class="fa-card"><strong>Versicherungsrecht</strong><span>Insurance law</span></div>
+  <div class="fa-card"><strong>Sozialrecht</strong><span>Social security law</span></div>
+  <div class="fa-card"><strong>Medizinrecht</strong><span>Medical law</span></div>
+  <div class="fa-card"><strong>Miet- und WEG-Recht</strong><span>Tenancy & property</span></div>
+  <div class="fa-card"><strong>Erbrecht</strong><span>Inheritance law</span></div>
+  <div class="fa-card"><strong>Bau- und Architektenrecht</strong><span>Construction law</span></div>
+  <div class="fa-card"><strong>Handels- und Gesellschaftsrecht</strong><span>Corporate & commercial</span></div>
+  <div class="fa-card"><strong>Insolvenzrecht</strong><span>Insolvency law</span></div>
+  <div class="fa-card"><strong>Gewerblicher Rechtsschutz</strong><span>IP / unfair competition</span></div>
+  <div class="fa-card"><strong>Urheber- und Medienrecht</strong><span>Copyright & media</span></div>
+  <div class="fa-card"><strong>IT-Recht</strong><span>Information technology</span></div>
+  <div class="fa-card"><strong>Transport- und Speditionsrecht</strong><span>Transport law</span></div>
+  <div class="fa-card"><strong>Ausländer- und Asylrecht</strong><span>Immigration & asylum</span></div>
+  <div class="fa-card"><strong>Agrarrecht</strong><span>Agricultural law</span></div>
+  <div class="fa-card"><strong>Bank- und Kapitalmarktrecht</strong><span>Banking & capital markets</span></div>
+  <div class="fa-card"><strong>Vergabe- und Wettbewerbsrecht</strong><span>Procurement & competition</span></div>
+  <div class="fa-card"><strong>Sportrecht</strong><span>Sports law</span></div>
+  <div class="fa-card"><strong>Migrationsrecht</strong><span>Migration law (new 2024)</span></div>
+  <div class="fa-card"><strong>Energierecht</strong><span>Energy law</span></div>
+</div>
+
+</main>
+<footer>
+  <p>Information for general guidance only. Not legal advice. Consult a qualified Rechtsanwalt for your specific situation.</p>
+  <p style="margin-top:.5rem"><a href="https://germany.avokatfinder.com/">AvokatFinder Germany</a> | <a href="https://germany.avokatfinder.com/tools/">Legal Tools</a> | <a href="https://germany.avokatfinder.com/find-a-lawyer/">Find a Lawyer</a></p>
+</footer>
+<script>
+const qMap = {
+  'q2a':'q1','q2b':'q1','q2c':'q1','q2d':'q1','q2e':'q1','q2f':'q1','q2g':'q1','q2h':'q1'
+};
+function next(id){
+  document.querySelectorAll('.q-card').forEach(c=>c.classList.remove('active'));
+  const el=document.getElementById(id);
+  if(el)el.classList.add('active');
+}
+function showResult(id){
+  document.querySelectorAll('.q-card').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.result-card').forEach(c=>c.classList.remove('active'));
+  const el=document.getElementById(id);
+  if(el)el.classList.add('active');
+}
+function restart(){
+  document.querySelectorAll('.result-card').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.q-card').forEach(c=>c.classList.remove('active'));
+  document.getElementById('q1').classList.add('active');
+}
+
+// RVG base fee table (§13 RVG Anlage 2, simplified)
+function rvgBase(sw){
+  const tiers=[
+    [500,49],[1000,88],[1500,127],[2000,166],[3000,222],[4000,278],[5000,334],[6000,390],[7000,446],[8000,502],[9000,558],[10000,614],[13000,694],[16000,774],[19000,854],[22000,934],[25000,1014],[30000,1130],[35000,1246],[40000,1362],[45000,1478],[50000,1594],[65000,1782],[80000,1970],[95000,2158],[110000,2346],[125000,2534],[140000,2722],[155000,2910],[170000,3098],[185000,3286],[200000,3474],[230000,3661],[260000,3848],[290000,4035],[320000,4222],[350000,4409],[380000,4596],[410000,4783],[440000,4970],[470000,5157],[500000,5344]
+  ];
+  for(const[limit,fee] of tiers){if(sw<=limit)return fee;}
+  const extra=Math.ceil((sw-500000)/50000);
+  return 5344+extra*480;
+}
+
+function calcMini(){
+  const sw=parseFloat(document.getElementById('mini-sw').value)||0;
+  const type=document.getElementById('mini-type').value;
+  if(sw<500){alert('Please enter a Streitwert of at least EUR 500');return;}
+  const base=rvgBase(sw);
+  let mult=1.0,label='';
+  if(type==='consult'){mult=1.0;label='1.0 (Erstberatung cap EUR 190)';}
+  else if(type==='letter'){mult=1.3;label='1.3 (Geschäftsgebühr)';}
+  else if(type==='court'){mult=2.5;label='1.3+1.2 (Verfahrens + Terminsgebühr)';}
+  else if(type==='appeal'){mult=2.8;label='1.6+1.2 (appeal Verfahrens + Terminsgebühr)';}
+  let net=base*mult;
+  if(type==='consult')net=Math.min(net,190/1.19);
+  const vat=net*0.19;
+  const total=net+vat;
+  const fmt=n=>'EUR '+n.toLocaleString('de-DE',{minimumFractionDigits:2,maximumFractionDigits:2});
+  document.getElementById('mr-base').textContent=fmt(base);
+  document.getElementById('mr-mult').textContent=label;
+  document.getElementById('mr-net').textContent=fmt(net);
+  document.getElementById('mr-vat').textContent=fmt(vat);
+  document.getElementById('mr-total').textContent=fmt(total);
+  document.getElementById('mini-result').classList.add('show');
+}
+</script>
+</body>
+</html>
